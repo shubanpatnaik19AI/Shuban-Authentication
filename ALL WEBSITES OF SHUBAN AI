@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shuban Authentication</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'IBM Plex Mono', monospace;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+        }
+        .card-bg {
+            background: linear-gradient(145deg, #1f1f1f 0%, #0d0d0d 100%);
+            border: 1px solid #333;
+        }
+        .shadow-custom {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+        .text-gradient {
+            background-image: linear-gradient(45deg, #ffffff, #aaaaaa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="gradient-bg text-gray-100 min-h-screen flex flex-col antialiased">
+
+    <!-- Header -->
+    <header class="py-6 px-4 md:px-8 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <h1 class="text-3xl lg:text-4xl font-bold text-gradient">Shuban Authentication</h1>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#apps" class="text-gray-300 hover:text-white transition duration-300">Platforms</a>
+                <a href="#download" class="text-gray-300 hover:text-white transition duration-300">Download</a>
+                <a href="#how-to" class="text-gray-300 hover:text-white transition duration-300">How-To Appify</a>
+            </nav>
+            <button class="md:hidden p-2 rounded-md hover:bg-gray-800 transition duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6 text-white">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative py-20 md:py-32 text-center overflow-hidden">
+        <div class="h-64 md:h-96 absolute inset-0 opacity-10" style="background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af367?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTIyMjh8MHwxfHNlYXJjaHw4fHxiYWNrZ3JvdW5kJTIwdGVjaG5vbG9neXxlbnwwfHx8fDE3MTI5OTg0MDd8MA&ixlib=rb-4.0.3&q=80&w=1080'); background-size: cover; background-position: center; filter: grayscale(100%);"></div>
+        <div class="relative z-10 max-w-4xl mx-auto px-4">
+            <h2 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-tight mb-6 text-gradient">Your Gateway to the Shuban Universe</h2>
+            <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto">Seamlessly connect and authenticate across all your favorite Shuban platforms. One access point, endless possibilities.</p>
+            <a href="#apps" class="inline-block bg-white text-black px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-200 transition-all duration-300 transform hover:-translate-y-1 shadow-custom">
+                Explore Platforms
+            </a>
+        </div>
+    </section>
+
+    <!-- Platforms Section -->
+    <section id="apps" class="py-16 md:py-24 px-4 md:px-8">
+        <div class="max-w-7xl mx-auto">
+            <h3 class="text-3xl md:text-5xl font-bold text-center mb-16 text-gradient">Connected Platforms</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+
+                <!-- Platform Card 1 -->
+                <a href="https://shubanai-cleverpathai.vercel.app" target="_blank" class="block card-bg p-6 rounded-xl shadow-custom hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-9 h-9 text-white mr-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.035-.259a3.375 3.375 0 002.456-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.565L16.5 21.75l-.394-1.185a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.185-.394a2.25 2.25 0 001.423-1.423L16.5 15.75l.394 1.185a2.25 2.25 0 001.423 1.423L19.5 18.75l-1.185.394a2.25 2.25 0 00-1.423 1.423z" />
+                        </svg>
+                        <h4 class="text-2xl font-semibold text-white">CleverPathAI</h4>
+                    </div>
+                    <p class="text-gray-400 mb-4">Empowering your insights with AI-driven cleverness. Your intelligent assistant for complex tasks.</p>
+                    <span class="text-gray-500 text-sm">shubanai-cleverpathai.vercel.app</span>
+                </a>
+
+                <!-- Platform Card 2 -->
+                <a href="https://shubanai-musicpathai.vercel.app" target="_blank" class="block card-bg p-6 rounded-xl shadow-custom hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-9 h-9 text-white mr-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 9l10.5-3m0 0l-3 3m3-3l-3-3M2.25 10.5v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V10.5M4.5 18.75a.75.75 0 00-.75.75v.75c0 .414.336.75.75.75h.75a.75.75 0 00.75-.75v-.75a.75.75 0 00-.75-.75h-.75zM8.25 18.75a.75.75 0 00-.75.75v.75c0 .414.336.75.75.75h.75a.75.75 0 00.75-.75v-.75a.75.75 0 00-.75-.75h-.75zM12 18.75a.75.75 0 00-.75.75v.75c0 .414.336.75.75.75h.75a.75.75 0 00.75-.75v-.75a.75.75 0 00-.75-.75h-.75zM15.75 18.75a.75.75 0 00-.75.75v.75c0 .414.336.75.75.75h.75a.75.75 0 00.75-.75v-.75a.75.75 0 00-.75-.75h-.75z" />
+                        </svg>
+                        <h4 class="text-2xl font-semibold text-white">MusicPathAI</h4>
+                    </div>
+                    <p class="text-gray-400 mb-4">Crafting soundtracks and discovering new artists with AI. Your ultimate music companion.</p>
+                    <span class="text-gray-500 text-sm">shubanai-musicpathai.vercel.app</span>
+                </a>
+
+                <!-- Platform Card 3 -->
+                <a href="https://shubanai-codepathai.vercel.app" target="_blank" class="block card-bg p-6 rounded-xl shadow-custom hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-9 h-9 text-white mr-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+                        </svg>
+                        <h4 class="text-2xl font-semibold text-white">CodePathAI</h4>
+                    </div>
+                    <p class="text-gray-400 mb-4">Streamlining your development workflow with AI-powered code assistance and generation.</p>
+                    <span class="text-gray-500 text-sm">shubanai-codepathai.vercel.app</span>
+                </a>
+
+                <!-- Platform Card 4 -->
+                <a href="https://shubanmaps.vercel.app" target="_blank" class="block card-bg p-6 rounded-xl shadow-custom hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-9 h-9 text-white mr-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.75-8.25h4.5a2.25 2.25 0 012.25 2.25v1.375c0 .546-.437 1.002-.981 1.064L19.5 18c-.005.083-.01.166-.015.249v1.426a2.25 2.25 0 01-2.25 2.25H4.5a2.25 2.25 0 01-2.25-2.25V15m12.685-1.4c.44-.43.504-1.002.146-1.464L11.751 7.5a1.262 1.262 0 00-1.426 0L5.39 10.136c-.358.462-.294 1.034.145 1.465l.654.654c.423.423 1.095.556 1.666.34L10.5 11.25v4.992c0 .414.336.75.75.75h1.5a.75.75 0 00.75-.75V10.5m-.75 4.5V7.5" />
+                        </svg>
+                        <h4 class="text-2xl font-semibold text-white">ShubanMaps</h4>
+                    </div>
+                    <p class="text-gray-400 mb-4">Navigate your world with enhanced maps and location-based services, powered by Shuban.</p>
+                    <span class="text-gray-500 text-sm">shubanmaps.vercel.app</span>
+                </a>
+
+                <!-- Platform Card 5 -->
+                <a href="https://lightyearsai.vercel.app" target="_blank" class="block card-bg p-6 rounded-xl shadow-custom hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-9 h-9 text-white mr-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.035-.259a3.375 3.375 0 002.456-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.565L16.5 21.75l-.394-1.185a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.185-.394a2.25 2.25 0 001.423-1.423L16.5 15.75l.394 1.185a2.25 2.25 0 001.423 1.423L19.5 18.75l-1.185.394a2.25 2.25 0 00-1.423 1.423z" />
+                        </svg>
+                        <h4 class="text-2xl font-semibold text-white">LightYearsAI</h4>
+                    </div>
+                    <p class="text-gray-400 mb-4">Pushing the boundaries of artificial intelligence. Explore advanced AI solutions and research.</p>
+                    <span class="text-gray-500 text-sm">lightyearsai.vercel.app</span>
+                </a>
+
+                <!-- Platform Card 6 -->
+                <a href="https://imvid-ai.vercel.app" target="_blank" class="block card-bg p-6 rounded-xl shadow-custom hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-9 h-9 text-white mr-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z" />
+                        </svg>
+                        <h4 class="text-2xl font-semibold text-white">ImVid-AI</h4>
+                    </div>
+                    <p class="text-gray-400 mb-4">Revolutionizing video creation and editing with intelligent AI capabilities.</p>
+                    <span class="text-gray-500 text-sm">imvid-ai.vercel.app</span>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="py-16 md:py-24 bg-gray-950 px-4 md:px-8">
+        <div class="max-w-7xl mx-auto text-center">
+            <h3 class="text-3xl md:text-5xl font-bold mb-16 text-gradient">Download the Shuban App</h3>
+            <p class="text-lg md:text-xl text-gray-300 mb-12 max-w-3xl mx-auto">Access all your Shuban platforms from a single, unified application on your favorite devices. Secure, fast, and always connected.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+                <div class="card-bg p-8 rounded-xl shadow-custom flex flex-col items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-20 h-20 text-white mb-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 14.561c-1.492-.199-2.755.35-3.359 1.368a 1.125 1.125 0 01-1.198.375 1.125 1.125 0 01-.689-1.086c0-3.375-3-6-3-6m2.25-2.25a 1.125 1.125 0 00-2.25 0v3.375c0 .621-.504 1.125-1.125 1.125h-.75c-.621 0-1.125.504-1.125 1.125v.75c0 .621.504 1.125 1.125 1.125h.75c.621 0 1.125.504 1.125 1.125V18a 1.125 1.125 0 002.25 0v-4.875c0-.621.504-1.125 1.125-1.125h.75c.621 0 1.125-.504 1.125-1.125V9a 1.125 1.125 0 00-2.25 0V6.75m1.5-2.25a 1.125 1.125 0 00-2.25 0V3c0-.621.504-1.125 1.125-1.125H9a 1.125 1.125 0 00-1.125 0v1.5c0 .621-.504 1.125-1.125 1.125H6a 1.125 1.125 0 00-1.125 0V3c0-.621.504-1.125 1.125-1.125H7.5a 1.125 1.125 0 00-1.125 0v1.5c0 .621-.504 1.125-1.125 1.125H3.75a 1.125 1.125 0 00-1.125 0V3c0-.621.504-1.125 1.125-1.125H5.25a 1.125 1.125 0 00-1.125 0v1.5c0 .621-.504 1.125-1.125 1.125H3.75a 1.125 1.125 0 00-1.125 0V3c0-.621.504-1.125 1.125-1.125H9a 1.125 1.125 0 00-1.125 0v1.5c0 .621-.504 1.125-1.125 1.125h-.75c-.621 0-1.125.504-1.125 1.125V18a 1.125 1.125 0 001.125 1.125h.75c.621 0 1.125.504 1.125.125V18a 1.125 1.125 0 001.125 1.125h.75c.621 0 1.125.504 1.125-1.125V18a 1.125 1.125 0 001.125 1.125h.75c.621 0 1.125.504 1.125-1.125V18a 1.125 1.125 0 001.125 1.125h.75c.621 0 1.125.504 1.125-1.125V18a 1.125 1.125 0 001.125 1.125h.75c.621 0 1.125.504 1.125-1.125V18a 1.125 1.125 0 001.125 1.125h.75c.621 0 1.125.504 1.125-1.125V18a 1.125 1.125 0 001.125 1.125h.75c.621 0 1.125.504 1.125-1.125V18a 1.125 1.125 0 001.125 1.125h.75c.621 0 1.125.504 1.125-1.125V18a 1.125 1.125 0 001.125 1.125h.75c.621 0 1.125.504 1.125-1.125V18a 1.125 1.125 0 001.125 1.125h.75c.621 0 1.125.504 1.125-1.125V18a 1.125 1.125 0 001.125 1.125h.75c.621 0 1.125.504 1.125-1.125V18a 1.125 1.125 0 001.125 1.125h.75c.621 0 1.125.504 1.125-1.125V18a 1.125 1.125 0 001.125 1.125h.75c.621 0 1.125.504 1.125-1.125V18a 1.125 1.125 0 001.125 1.125h.75c.621 0 1.125.504 1.125-1.125V18a 1.125 1.125 0 001.125 1.125h.75c.621 0 1.125.504 1.125-1.125V18a 1.125 1.125 0 001.125 1.125h.75c.621 0 1.125.504 1.125-1.125V18a 1.125 1.125 0 001.125 1.125h.75c.621 0 1.125.504 1.125-1.125V18a 1.125 1.125 0 001.125 1.125h.75c.621 0 1.125.504 1.125-1.125V18a 1.125 1.125 0 001.125 1.125h.75c.621 0 1.125.504 1.125-1.125V18a 1.125 1.125 0 001.125 1.125h.75c.621 0 1.125.504 1.125-1.125V18a 1.125 1.125 0 001.125 1.125h1.5a.75.75 0 00.75-.75v-.75c0-.414-.336-.75-.75-.75h-.75zM17.25 14.561c-1.492-.199-2.755.35-3.359 1.368a 1.125 1.125 0 01-1.198.375 1.125 1.125 0 01-.689-1.086c0-3.375-3-6-3-6m2.25-2.25a 1.125 1.125 0 00-2.25 0v3.375c0 .621-.504 1.125-1.125 1.125h-.75c-.621 0-1.125-.504-1.125-1.125v-.75c0-.621.504-1.125 1.125-1.125H16.5m-3.75 2.25a 1.125 1.125 0 00-2.25 0v3.375c0 .621-.504 1.125-1.125 1.125h-.75c-.621 0-1.125-.504-1.125-1.125v-.75c0-.621.504-1.125 1.125-1.125H12" />
+                        </svg>
+                        <h4 class="text-xl font-bold text-white mb-2">Apple (iOS/macOS)</h4>
+                        <p class="text-gray-400 mb-4 text-center">Seamless integration with your Apple ecosystem.</p>
+                        <a href="#" class="inline-block bg-gray-700 text-white px-6 py-3 rounded-full hover:bg-gray-600 transition duration-300 transform hover:-translate-y-1">Download for iOS/macOS</a>
+                    </div>
+                <div class="card-bg p-8 rounded-xl shadow-custom flex flex-col items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-20 h-20 text-white mb-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+</svg>
+
+                        <h4 class="text-xl font-bold text-white mb-2">Android</h4>
+                        <p class="text-gray-400 mb-4 text-center">Optimized for all Android phones and tablets.</p>
+                        <a href="#" class="inline-block bg-gray-700 text-white px-6 py-3 rounded-full hover:bg-gray-600 transition duration-300 transform hover:-translate-y-1">Download for Android</a>
+                    </div>
+                <div class="card-bg p-8 rounded-xl shadow-custom flex flex-col items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-20 h-20 text-white mb-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21.75l-.75-.75 2.25-2.25a3 3 0 012.122-.879H15C15.939 18.006 16.5 17.298 16.5 16.5V1.5a.75.75 0 00-1.5 0V15A1.5 1.5 0 0113.5 16.5H9zM3.75 12H1C.559 12 .25 11.691.25 11.25V6.75a.75.75 0 011.5 0v3.75h2.25a.75.75 0 010 1.5z" />
+                    </svg>
+                        <h4 class="text-xl font-bold text-white mb-2">Windows</h4>
+                        <p class="text-gray-400 mb-4 text-center">Desktop experience for your Windows PC.</p>
+                        <a href="#" class="inline-block bg-gray-700 text-white px-6 py-3 rounded-full hover:bg-gray-600 transition duration-300 transform hover:-translate-y-1">Download for Windows</a>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How-To Appify Section -->
+    <section id="how-to" class="py-16 md:py-24 px-4 md:px-8">
+        <div class="max-w-7xl mx-auto">
+            <h3 class="text-3xl md:text-5xl font-bold text-center mb-16 text-gradient">Turn Any Website into an App on Your Device</h3>
+            <p class="text-lg md:text-xl text-gray-300 text-center mb-12 max-w-3xl mx-auto">You can easily turn Shuban Authentication, or any of your favorite Shuban platforms, into a standalone application on your device in a few simple steps. No coding required!</p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12">
+                <!-- iOS/macOS PWA Guide -->
+                <div class="card-bg p-8 rounded-xl shadow-custom">
+                    <h4 class="text-2xl font-bold text-white mb-4 flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8 text-white mr-3">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 14.561c-1.492-.199-2.755.35-3.359 1.368a1.125 1.125 0 01-1.198.375 1.125 1.125 0 01-.689-1.086c0-3.375-3-6-3-6m2.25-2.25a1.125 1.125 0 00-2.25 0v3.375c0 .621-.504 1.125-1.125 1.125h-.75c-.621 0-1.125.504-1.125 1.125v.75c0 .621.504 1.125 1.125 1.125h.75c.621 0 1.125.504 1.125 1.125V18a1.125 1.125 0 002.25 0v-4.875c0-.621.504-1.125 1.125-1.125h.75c.621 0 1.125-.504 1.125-1.125V9a1.125 1.125 0 00-2.25 0V6.75m1.5-2.25a1.125 1.125 0 00-2.25 0V3c0-.621.504-1.125 1.125-1.125H9a1.125 1.125 0 00-1.125 0v1.5c0 .621-.504 1.125-1.125 1.125H6a1.125 1.125 0 00-1.125 0V3c0-.621.504-1.125 1.125-1.125H7.5a1.125 1.125 0 00-1.125 0v1.5c0 .621-.504 1.125-1.125 1.125H3.75a1.125 1.125 0 00-1.125 0V3c0-.621.504-1.125 1.125-1.125H5.25a1.125 1.125 0 00-1.125 0v1.5c0 .621-.504 1.125-1.125 1.125H3.75a1.125 1.125 0 00-1.125 0V3c0-.621.504-1.125 1.125-1.125H9a1.125 1.125 0 00-1.125 0v1.5c0 .621-.504 1.125-1.125 1.125h-.75c-.621 0-1.125.504-1.125 1.125V18a1.125 1.125 0 001.125 1.125h.75c.621 0 1.125.504 1.125.125V18a1.125 1.125 0 001.125 1.125h.75c.621 0 1.125.504 1.125-1.125V18a1.125 1.125 0 001.125 1.125h.75c.621 0 1.125.504 1.125-1.125V18a1.125 1.125 0 001.125 1.125h.75c.621 0 1.125.504 1.125-1.125V18a1.125 1.125 0 001.125 1.125h.75c.621 0 1.125.504 1.125-1.125V18a1.125 1.125 0 001.125 1.125h.75c.621 0 1.125.504 1.125-1.125V18a1.125 1.125 0 001.125 1.125h.75c.621 0 1.125.504 1.125-1.125V18a1.125 1.125 0 001.125 1.125h.75c.621 0 1.125.504 1.125-1.125V18a1.125 1.125 0 001.125 1.125h.75c.621 0 1.125.504 1.125-1.125V18a1.125 1.125 0 001.125 1.125h.75c.621 0 1.125.504 1.125-1.125V18a1.125 1.125 0 001.125 1.125h1.5a.75.75 0 00.75-.75v-.75c0-.414-.336-.75-.75-.75h-.75zM17.25 14.561c-1.492-.199-2.755.35-3.359 1.368a1.125 1.125 0 01-1.198.375 1.125 1.125 0 01-.689-1.086c0-3.375-3-6-3-6m2.25-2.25a1.125 1.125 0 00-2.25 0v3.375c0 .621-.504 1.125-1.125 1.125h-.75c-.621 0-1.125-.504-1.125-1.125v-.75c0-.621.504-1.125 1.125-1.125H16.5m-3.75 2.25a1.125 1.125 0 00-2.25 0v3.375c0 .621-.504 1.125-1.125 1.125h-.75c-.621 0-1.125-.504-1.125-1.125v-.75c0-.621.504-1.125 1.125-1.125H12" />
+                        </svg>
+                        iOS & macOS
+                    </h4>
+                    <ol class="list-decimal list-inside text-gray-300 space-y-3">
+                        <li>Open this website (or any Shuban platform) in Safari.</li>
+                        <li>Tap the "Share" icon (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 inline-block mx-1">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
+                            </svg>) at the bottom of your screen (iOS) or in the browser toolbar (macOS).</li>
+                        <li>Scroll down and select "Add to Home Screen" (iOS) or "Add to Dock" (macOS).</li>
+                        <li>Confirm the name and tap "Add". The website will now appear as an app icon!</li>
+                    </ol>
+                </div>
+
+                <!-- Android PWA Guide -->
+                <div class="card-bg p-8 rounded-xl shadow-custom">
+                    <h4 class="text-2xl font-bold text-white mb-4 flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8 text-white mr-3">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 10.5h6m-6 3h6m-3-6V2.25H2.25c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h17.5c.621 0 1.125-.504 1.125-1.125V10.5M16.5 6v7.5m0-7.5l-3 3m3-3l3 3" />
+                        </svg>
+                        Android
+                    </h4>
+                    <ol class="list-decimal list-inside text-gray-300 space-y-3">
+                        <li>Open this website (or any Shuban platform) in Chrome browser.</li>
+                        <li>Tap the three-dot menu icon (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 inline-block mx-1">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" />
+                            </svg>) in the top-right corner.</li>
+                        <li>Select "Add to Home screen" from the dropdown menu.</li>
+                        <li>You can edit the name of the shortcut, then tap "Add". The app icon will appear on your home screen.</li>
+                    </ol>
+                </div>
+
+                <!-- Windows PWA Guide -->
+                <div class="card-bg p-8 rounded-xl shadow-custom">
+                    <h4 class="text-2xl font-bold text-white mb-4 flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8 text-white mr-3">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21.75l-.75-.75 2.25-2.25a3 3 0 012.122-.879H15C15.939 18.006 16.5 17.298 16.5 16.5V1.5a.75.75 0 00-1.5 0V15A1.5 1.5 0 0113.5 16.5H9zM3.75 12H1C.559 12 .25 11.691.25 11.25V6.75a.75.75 0 011.5 0v3.75h2.25a.75.75 0 010 1.5z" />
+                        </svg>
+                        Windows
+                    </h4>
+                    <ol class="list-decimal list-inside text-gray-300 space-y-3">
+                        <li>Open this website (or any Shuban platform) in Microsoft Edge or Google Chrome.</li>
+                        <li>In Edge, click the "..." menu (top-right) → "Apps" → "Install this site as an app".</li>
+                        <li>In Chrome, click the three-dot menu (top-right) → "Install Shuban Authentication..." (or the site's name).</li>
+                        <li>Confirm the installation. The website will now run as a standalone application, accessible from your Start Menu.</li>
+                    </ol>
+                </div>
+            </div>
+            <p class="text-center text-gray-400 mt-12 text-sm max-w-xl mx-auto">
+                These steps utilize Progressive Web App (PWA) technology, which allows websites to offer an app-like experience directly from your browser.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-auto py-8 px-4 md:px-8 border-t border-gray-800 text-center text-gray-400">
+        <p>&copy; 2023 Shuban. All rights reserved.</p>
+        <p class="mt-2 text-sm text-gray-500">Built with passion and innovation for a connected future.</p>
+    </footer>
+
+</body>
+</html>
